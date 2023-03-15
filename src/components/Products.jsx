@@ -1,4 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 export default function Products() {
-  return <div>This is products page</div>;
+  return (
+    <div>
+      <p>This is dashboard</p>
+      <Link to="/">go to home</Link>
+    </div>
+  );
 }
