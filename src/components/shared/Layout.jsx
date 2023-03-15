@@ -7,6 +7,7 @@ export default function Layout() {
       <div className="bg-sky-100">sidebar</div>
       <div className="bg-teal-200">header</div>
       <div>{<Outlet />}</div>
+      <p>Footer</p>
     </div>
   );
 }
