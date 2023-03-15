@@ -1,5 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Dashboard() {
-  return <div>This is dashboard</div>;
+  return (
+    <div>
+      <p>This is dashboard</p>
+      <Link to="/products">go to products</Link>
+    </div>
+  );
 }
