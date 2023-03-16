@@ -22,7 +22,11 @@ export default function Sidebar() {
           <SidebarLink key={item.key} item={item} />
         ))}
       </div>
-      <div>Bottom part</div>
+      <div>
+        {DASHBOARD_SIDEBAR_BOTTOM_LINKS.map((item) => (
+          <SidebarLink key={item.key} item={item} />
+        ))}
+      </div>
     </div>
   );
 }
@@ -33,8 +37,9 @@ function SidebarLink({ item }) {
     <Link
       to={item.path}
       className={classNames(
-        pathname === item.path ? "text-white" : "",
-        "text-white",
+        pathname === item.path
+          ? "bg-neutral-700 text-white"
+          : "text-neutral-400",
         linkClass
       )}
     >
