@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { FcBullish } from "react-icons/fc";
+import { HiOutlineLogout } from "react-icons/hi";
 import { Link, useLocation } from "react-router-dom";
 import {
   DASHBOARD_SIDEBAR_BOTTOM_LINKS,
@@ -26,6 +27,13 @@ export default function Sidebar() {
         {DASHBOARD_SIDEBAR_BOTTOM_LINKS.map((item) => (
           <SidebarLink key={item.key} item={item} />
         ))}
+
+        <div className={classNames("text-red-500", linkClass)}>
+          <span className="text-xl">
+            <HiOutlineLogout></HiOutlineLogout>
+          </span>
+          Logout
+        </div>
       </div>
     </div>
   );
