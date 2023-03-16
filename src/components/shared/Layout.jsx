@@ -1,10 +1,11 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import Sidebar from "./Sidebar";
 
 export default function Layout() {
   return (
-    <div>
-      <div className="bg-sky-100">sidebar</div>
+    <div className="flex flex-row bg-neutral-100 h-screen w-screen overflow-hidden">
+      <Sidebar />
       <div className="bg-teal-200">header</div>
       <div>{<Outlet />}</div>
       <p>Footer</p>
