@@ -15,15 +15,19 @@ export default function Sidebar() {
       </div>
       <div className="flex-1">
         {DASHBOARD_SIDEBAR_LINKS.map((item) => (
-          <div key={item.key}>
-            <span>{item.icon}</span>
-            <Link to={item.path}>
-              <span>{item.label}</span>
-            </Link>
-          </div>
+          <SidebarLink key={item.key} item={item} />
         ))}
       </div>
       <div>Bottom part</div>
     </div>
+  );
+}
+
+function SidebarLink({ item }) {
+  return (
+    <Link>
+      <span className="text-xl">{item.icon}</span>
+      {item.label}
+    </Link>
   );
 }
